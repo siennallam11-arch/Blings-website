@@ -1,0 +1,27 @@
+  <main class="home-main">
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="name"><span class="hello">Hello! I'm</span> Will Chang</h1>
+        <p class="eyebrow">Berkeley, CA</p>
+      </div>
+      <div class="photo"><img src="assets/headshot.jpg" alt="William Chang" width="1000" height="1250"></div>
+    </section>
+
+    <section class="band" id="about">
+      <h2 class="band-label">About</h2>
+      <div class="band-body">
+        <p class="lead">I'm a senior at UC Berkeley studying Data Science with an emphasis in Economics, graduating in May 2027.</p>
+        <p>I like problems where machine learning and experimentation meet real product decisions.</p>
+        <p>This past summer I was a Data Scientist Intern at Meta, working on Instagram ranking and server capacity. Before that I spent over a year at SwingVision building AI features for tennis and pickleball players. In my free time, I enjoy playing collegiate pickleball, club tennis, and exploring new coffee shops in the Bay Area.</p>
+      </div>
+    </section>
+
+    <section class="band" id="explore">
+      <h2 class="band-label">Explore</h2>
+      <ul class="explore">
+        <li><a href="experience.html"><span class="ex-name">Experience</span><span class="ex-desc">Meta, SwingVision, and HERO2</span><span class="ex-arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="projects.html"><span class="ex-name">Projects</span><span class="ex-desc">Coming soon</span><span class="ex-arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="hobbies.html"><span class="ex-name">Hobbies &amp; Extracurriculars</span><span class="ex-desc">Tutoring, pickleball, baseball, and YouTube</span><span class="ex-arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </section>
+  </main>
