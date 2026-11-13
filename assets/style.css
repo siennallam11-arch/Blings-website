@@ -146,7 +146,8 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .course-row dt { color: var(--muted); }
 .course-row dd { margin: 0; min-width: 0; }
 .course-row ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-.course-row li { margin: 0; }
+.course-row li { margin: 0; display: grid; grid-template-columns: 9ch minmax(0, 1fr); gap: 12px; }
+.course-row .code { color: var(--muted); white-space: nowrap; }
 @media (max-width: 760px) { .course-row { grid-template-columns: 1fr; } }
 .skills { margin: 0; }
 .skill-row { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 8px 32px; padding-block: 20px; border-bottom: 1px solid var(--line); }
