@@ -209,3 +209,5 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 /* Job title, location and dates in the body font (same as course names) */
 .role .title { font-family: var(--sans); font-size: 1.05rem; }
 .role .when { font-family: var(--sans); text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.explore .ex-static { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px 28px; padding-block: 22px; }
+@media (max-width: 760px) { .explore .ex-static { grid-template-columns: minmax(0, 1fr); } .explore .ex-static .ex-desc { text-align: left; } }
