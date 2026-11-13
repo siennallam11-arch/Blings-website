@@ -161,7 +161,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .role { scroll-margin-top: 16px; }
 
 /* Monospace reserved for small labels, codes and tags */
-.brand, .links, .eyebrow, .crumbs, .jump, .xlabel, .role .when, .dl, .sh-label, .foot-line, .courses .code, .chips li, .ex-desc, .role .title { font-family: var(--mono); }
+.brand, .links, .eyebrow, .crumbs, .jump, .xlabel, .dl, .sh-label, .foot-line, .courses .code, .chips li, .ex-desc { font-family: var(--mono); }
 .xsec > .role + .role { border-top: 1px solid var(--line); }
 .role > p.muted { margin: 0; }
 .role-head + p.muted { margin-top: 10px; }
@@ -205,3 +205,7 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .tagline.tagline-wide { max-width: 86ch; }
 .role-desc { color: var(--muted); font-family: var(--mono); font-size: clamp(0.98rem, 1.2vw, 1.05rem); line-height: 1.8; margin: 4px 0 0; max-width: none; }
 .role-desc strong { font-weight: 600; color: var(--text); }
+
+/* Job title, location and dates in the body font (same as course names) */
+.role .title { font-family: var(--sans); font-size: 1.05rem; }
+.role .when { font-family: var(--sans); text-transform: none; letter-spacing: 0; font-size: 1rem; }
