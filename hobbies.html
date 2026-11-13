@@ -48,17 +48,33 @@
         </div>
         <div class="feature-text">
           <p class="muted">More details coming soon.</p>
-          <p><a class="more-link" href="pickleball.html">More on the Pickleball page <span aria-hidden="true">→</span></a></p>
+          <p><a class="more-link" href="#hobby-pickleball" onclick="document.getElementById(&quot;hobby-pickleball&quot;).open=true">More under Pickleball below <span aria-hidden="true">↓</span></a></p>
         </div>
       </div>
     </section>
     <section class="xsec" id="hobby-list">
       <h2 class="xlabel">Hobbies</h2>
-      <ul class="explore hobby-list">
-        <li><a href="pickleball.html"><span class="ex-name">Pickleball</span><span class="ex-desc">Collegiate pickleball</span><span class="ex-arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="baseball.html"><span class="ex-name">Baseball</span><span class="ex-desc">On the field</span><span class="ex-arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="https://www.youtube.com/@willchang27"><span class="ex-name">YouTube</span><span class="ex-desc">Making videos</span><span class="ex-arrow" aria-hidden="true">↗</span></a></li>
-      </ul>
+      <div class="hobbies">
+        <details class="hobby" id="hobby-pickleball">
+          <summary><span class="ex-name">Pickleball</span><span class="ex-desc">Collegiate pickleball</span><span class="hobby-icon" aria-hidden="true"></span></summary>
+          <div class="hobby-body">
+            <p class="muted">Write-up coming soon.</p>
+          </div>
+        </details>
+        <details class="hobby" id="hobby-baseball">
+          <summary><span class="ex-name">Baseball</span><span class="ex-desc">On the field</span><span class="hobby-icon" aria-hidden="true"></span></summary>
+          <div class="hobby-body">
+            <p class="muted">Write-up coming soon.</p>
+          </div>
+        </details>
+        <details class="hobby" id="hobby-youtube">
+          <summary><span class="ex-name">YouTube</span><span class="ex-desc">Making videos</span><span class="hobby-icon" aria-hidden="true"></span></summary>
+          <div class="hobby-body">
+            <p class="muted">Write-up coming soon.</p>
+            <p><a class="more-link" href="https://www.youtube.com/@willchang27">Visit my channel <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+      </div>
     </section>
   </main>
   <footer>

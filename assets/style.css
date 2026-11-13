@@ -216,3 +216,24 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .more-link span { display: inline-block; transition: transform 0.2s ease; }
 .more-link:hover span { transform: translateX(4px); }
 @media (prefers-reduced-motion: reduce) { .more-link span { transition: none; } }
+
+/* Hobby toggles */
+.hobbies { border-top: none; }
+.hobby { border-bottom: 1px solid var(--line); }
+.hobby summary { display: grid; grid-template-columns: minmax(0, 1fr) auto 20px; align-items: baseline; gap: 8px 28px; padding-block: 22px; cursor: pointer; list-style: none; }
+.hobby summary::-webkit-details-marker { display: none; }
+.hobby summary:hover .ex-name { color: var(--accent); }
+.hobby summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.hobby-icon { position: relative; width: 14px; height: 14px; align-self: center; justify-self: end; }
+.hobby-icon::before, .hobby-icon::after { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 1.5px; background: var(--text); transition: transform 0.2s ease; }
+.hobby-icon::after { transform: rotate(90deg); }
+.hobby[open] .hobby-icon::after { transform: rotate(0deg); }
+.hobby-body { padding: 0 0 28px; max-width: 80ch; }
+.hobby-body p { margin: 0 0 14px; }
+.hobby { scroll-margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .hobby-icon::before, .hobby-icon::after { transition: none; } }
+@media (max-width: 760px) {
+  .hobby summary { grid-template-columns: minmax(0, 1fr) 20px; }
+  .hobby summary .ex-desc { grid-column: 1; grid-row: 2; text-align: left; }
+  .hobby-icon { grid-column: 2; grid-row: 1; }
+}

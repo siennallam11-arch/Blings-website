@@ -5,5 +5,5 @@
 - [x] Experience page: layout, Education, Skills, jump links
 - [ ] Course website links (only Econ 148 linked so far); confirm Stat 134 with William
 - [ ] Projects page: add projects (currently "coming soon")
-- [ ] Hobbies & Extracurriculars: pickleball coaching details (where, how long, description); write-ups for pickleball and baseball pages
+- [ ] Hobbies & Extracurriculars: pickleball coaching details (where, how long, description); write-ups for the pickleball, baseball and YouTube toggles
 - [x] HERO2 link (hero2.org)
