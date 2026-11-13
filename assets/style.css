@@ -44,7 +44,7 @@ header nav { display: flex; align-items: center; justify-content: space-between;
   padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 420px); gap: 48px; align-items: center; padding-block: 64px; }
 .hero-text { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; color: var(--muted); margin: 0; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; color: var(--muted); margin: 0; }
 .name { font-family: var(--display); font-weight: 300; font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1.02; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
 .name .hello { color: var(--muted); }
 .hero-sub { color: var(--muted); margin: 0; }
@@ -86,7 +86,7 @@ p { margin-bottom: 14px; }
 .roles .role:first-child { border-top: none; }
 .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 32px; flex-wrap: wrap; }
 .role h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.6rem, 2.8vw, 2.2rem); line-height: 1.15; margin: 0; }
-.role .when { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--muted); margin: 0; white-space: nowrap; }
+.role .when { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem; color: var(--muted); margin: 0; white-space: nowrap; }
 .role .title { color: var(--muted); margin: 6px 0 18px; }
 .role ul { padding-left: 18px; }
 .role li { margin-bottom: 10px; }
@@ -100,7 +100,7 @@ footer { flex-shrink: 0; background: var(--tile);
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .foot-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px 32px; flex-wrap: wrap; padding-block: 48px 40px; border-bottom: 1px solid var(--line); }
 .say-hello { display: flex; flex-direction: column; gap: 10px; text-decoration: none; min-width: 0; }
-.sh-label, .foot-line { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; color: var(--muted); }
+.sh-label, .foot-line { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.875rem; color: var(--muted); }
 .sh-email { font-family: var(--display); font-weight: 300; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.1; overflow-wrap: anywhere; }
 .sh-arrow { font-size: 0.5em; vertical-align: super; margin-left: 4px; }
 .say-hello:hover .sh-email { color: var(--accent); }
@@ -119,12 +119,12 @@ header nav { max-width: 1400px; margin: 0 auto; }
 /* Inner page header */
 .page-head { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding-bottom: 24px; }
 .page-head h1 { margin: 0; }
-.crumbs { display: flex; gap: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--muted); }
+.crumbs { display: flex; gap: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; color: var(--muted); }
 .crumbs a { color: var(--muted); text-decoration: none; }
 .crumbs a:hover { color: var(--text); text-decoration: underline; }
 .crumbs [aria-current] { color: var(--text); }
 .tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.2rem, 2.2vw, 1.6rem); line-height: 1.4; max-width: 44ch; margin: 0; }
-.dl { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.8rem; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--text); }
+.dl { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--text); }
 .dl svg { width: 15px; height: 15px; }
 .dl:hover { color: var(--accent); border-color: var(--accent); }
 .dl:hover svg { transform: translateY(2px); }
@@ -133,11 +133,11 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .role h3 a { text-decoration-thickness: 1px; }
 
 /* Experience sections */
-.jump { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--muted); }
+.jump { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; color: var(--muted); }
 .jump a { color: var(--muted); text-decoration: none; }
 .jump a:hover { color: var(--text); text-decoration: underline; }
 .xsec { padding-top: 48px; scroll-margin-top: 16px; }
-.xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
+.xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
 .xsec > .role { border-top: none; }
 .sublabel { font-size: 0.85rem; font-weight: 500; margin: 22px 0 12px; }
 .courses { list-style: none; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px 32px; }
