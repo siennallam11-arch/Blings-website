@@ -211,3 +211,8 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .role .when { font-family: var(--sans); text-transform: none; letter-spacing: 0; font-size: 1rem; }
 .explore .ex-static { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px 28px; padding-block: 22px; }
 @media (max-width: 760px) { .explore .ex-static { grid-template-columns: minmax(0, 1fr); } .explore .ex-static .ex-desc { text-align: left; } }
+.feature + .feature { border-top: 1px solid var(--line); margin-top: 24px; }
+.more-link { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; text-decoration: none; }
+.more-link span { display: inline-block; transition: transform 0.2s ease; }
+.more-link:hover span { transform: translateX(4px); }
+@media (prefers-reduced-motion: reduce) { .more-link span { transition: none; } }
