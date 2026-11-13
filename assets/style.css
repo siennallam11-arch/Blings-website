@@ -218,22 +218,14 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 @media (prefers-reduced-motion: reduce) { .more-link span { transition: none; } }
 
 /* Hobby toggles */
-.hobbies { border-top: none; }
-.hobby { border-bottom: 1px solid var(--line); }
-.hobby summary { display: grid; grid-template-columns: minmax(0, 1fr) auto 20px; align-items: baseline; gap: 8px 28px; padding-block: 22px; cursor: pointer; list-style: none; }
+.hobby { border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+.hobby summary { display: flex; align-items: center; gap: 14px; padding-block: 22px; cursor: pointer; list-style: none; width: fit-content; max-width: 100%; }
 .hobby summary::-webkit-details-marker { display: none; }
-.hobby summary:hover .ex-name { color: var(--accent); }
+.hobby summary:hover .ex-name, .hobby summary:hover .hobby-caret { color: var(--accent); }
 .hobby summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.hobby-icon { position: relative; width: 14px; height: 14px; align-self: center; justify-self: end; }
-.hobby-icon::before, .hobby-icon::after { content: ""; position: absolute; left: 0; top: 50%; width: 14px; height: 1.5px; background: var(--text); transition: transform 0.2s ease; }
-.hobby-icon::after { transform: rotate(90deg); }
-.hobby[open] .hobby-icon::after { transform: rotate(0deg); }
+.hobby-caret { width: 20px; height: 20px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; color: var(--text); transition: transform 0.2s ease; }
+.hobby[open] .hobby-caret { transform: rotate(180deg); }
 .hobby-body { padding: 0 0 28px; max-width: 80ch; }
 .hobby-body p { margin: 0 0 14px; }
-.hobby { scroll-margin-top: 16px; }
-@media (prefers-reduced-motion: reduce) { .hobby-icon::before, .hobby-icon::after { transition: none; } }
-@media (max-width: 760px) {
-  .hobby summary { grid-template-columns: minmax(0, 1fr) 20px; }
-  .hobby summary .ex-desc { grid-column: 1; grid-row: 2; text-align: left; }
-  .hobby-icon { grid-column: 2; grid-row: 1; }
-}
+@media (prefers-reduced-motion: reduce) { .hobby-caret { transition: none; } }
+
