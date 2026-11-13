@@ -229,3 +229,4 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .hobby-body p { margin: 0 0 14px; }
 @media (prefers-reduced-motion: reduce) { .hobby-caret { transition: none; } }
 
+.org-logo { width: clamp(64px, 6vw, 84px); height: auto; margin-top: 14px; display: block; }
