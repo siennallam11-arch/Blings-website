@@ -201,3 +201,4 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 @media (max-width: 760px) { .feature { grid-template-columns: 1fr; } }
 .tiles .tile-photo { aspect-ratio: 16 / 9; }
 .band-body p:not(.lead) { font-size: 1.15rem; line-height: 1.7; }
+.hobby-list { margin-top: 0; border-top: none; }

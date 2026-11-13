@@ -5,5 +5,5 @@
 - [x] Experience page: layout, Education, Skills, jump links
 - [ ] Course website links (only Econ 148 linked so far); confirm Stat 134 with William
 - [ ] Projects page: add projects (currently "coming soon")
-- [ ] Hobbies & Extracurriculars: write descriptions for tutoring, pickleball, baseball (and tutoring dates)
+- [ ] Hobbies & Extracurriculars: tutoring description; one-line descriptions + write-ups for pickleball, baseball, fitness, healthy cooking
 - [x] HERO2 link (hero2.org)
