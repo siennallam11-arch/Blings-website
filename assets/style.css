@@ -141,14 +141,14 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
 .xsec > .role { border-top: none; }
 .sublabel { font-size: 0.85rem; font-weight: 500; margin: 22px 0 12px; }
-.courses { margin: 0; border-top: 1px solid var(--line); }
-.course-row { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 6px 32px; padding-block: 16px; border-bottom: 1px solid var(--line); }
+.courses { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.course-row { display: flex; flex-direction: column; gap: 12px; padding-block: 18px 22px; border-top: 1px solid var(--line); min-width: 0; }
 .course-row dt { color: var(--muted); }
 .course-row dd { margin: 0; min-width: 0; }
 .course-row ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
 .course-row li { margin: 0; display: grid; grid-template-columns: 9ch minmax(0, 1fr); gap: 12px; }
 .course-row .code { color: var(--muted); white-space: nowrap; }
-@media (max-width: 760px) { .course-row { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .courses { grid-template-columns: minmax(0, 1fr); } }
 .skills { margin: 0; }
 .skill-row { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 8px 32px; padding-block: 20px; border-bottom: 1px solid var(--line); }
 .skill-row dt { color: var(--muted); padding-top: 4px; }
