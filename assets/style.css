@@ -185,7 +185,7 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 
 /* Single hobby page */
 .story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 48px; align-items: start; padding-top: 16px; }
-.story-photo { aspect-ratio: 4 / 3; }
+.story-photo { aspect-ratio: 4 / 5; }
 .story-text { min-width: 0; max-width: 68ch; }
 .back { margin-top: 56px; font-family: var(--mono); font-size: 0.9rem; }
 .back a { text-decoration: none; color: var(--muted); }
@@ -200,3 +200,4 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .feature-text p { margin: 0 0 14px; }
 @media (max-width: 760px) { .feature { grid-template-columns: 1fr; } }
 .tiles .tile-photo { aspect-ratio: 16 / 9; }
+.band-body p:not(.lead) { font-size: 1.15rem; line-height: 1.7; }
