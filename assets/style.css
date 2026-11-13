@@ -273,3 +273,15 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .g-count { position: absolute; right: 10px; bottom: 10px; padding: 4px 8px; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; color: #fff; background: rgba(0,0,0,0.6); }
 .hobby-media.gallery .g-count { color: #fff; font-size: 0.75rem; }
 @media (max-width: 760px) { .hobby-media:not(.video) { aspect-ratio: 4 / 5; } }
+
+/* Match the home About paragraph size/colour across body copy */
+.role .title, .role .when, .role-desc, .courses .cname,
+.feature-text p, .hobby-text p {
+  font-family: var(--sans); font-size: 1.25rem; line-height: 1.65; color: var(--muted);
+}
+.role-desc strong { color: var(--text); }
+.role .when { white-space: nowrap; }
+.courses li { align-items: baseline; }
+@media (max-width: 560px) {
+  .role .title, .role .when, .role-desc, .courses .cname, .feature-text p, .hobby-text p { font-size: 1.125rem; }
+}
