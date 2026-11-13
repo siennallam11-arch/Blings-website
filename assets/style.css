@@ -161,3 +161,6 @@ header nav { max-width: 1400px; margin: 0 auto; }
 
 /* Monospace reserved for small labels, codes and tags */
 .brand, .links, .eyebrow, .crumbs, .jump, .xlabel, .role .when, .dl, .sh-label, .foot-line, .courses .code, .chips li, .ex-desc, .role .title { font-family: var(--mono); }
+.xsec > .role + .role { border-top: 1px solid var(--line); }
+.role > p.muted { margin: 0; }
+.role-head + p.muted { margin-top: 10px; }
