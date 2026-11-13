@@ -124,7 +124,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .crumbs a { color: var(--muted); text-decoration: none; }
 .crumbs a:hover { color: var(--text); text-decoration: underline; }
 .crumbs [aria-current] { color: var(--text); }
-.tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.45; margin: 0; }
+.tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.45; max-width: 52ch; margin: 0; }
 .dl { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--text); }
 .dl svg { width: 15px; height: 15px; }
 .dl:hover { color: var(--accent); border-color: var(--accent); }
@@ -151,3 +151,13 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
 .chips li { border: 1px solid var(--line); padding: 3px 10px; font-size: 0.85rem; white-space: nowrap; }
 @media (max-width: 760px) { .skill-row { grid-template-columns: 1fr; } }
+
+/* Company marks beside page title */
+.title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; width: 100%; }
+.marks { display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); }
+.marks a { display: block; color: var(--text); width: clamp(40px, 5vw, 64px); }
+.marks svg { width: 100%; height: auto; display: block; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.marks a:hover { color: var(--accent); }
+.marks a:hover svg { transform: translateY(-2px); }
+.role { scroll-margin-top: 16px; }
+@media (prefers-reduced-motion: reduce) { .marks svg { transition: none; } }
