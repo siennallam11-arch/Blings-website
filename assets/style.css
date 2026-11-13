@@ -320,3 +320,13 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .doodle-arrow { width: 58px; height: 68px; flex-shrink: 0; margin-top: -2px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 .video-list { padding-left: 2.6em; }
 @media (max-width: 760px) { .hobby-video .hobby-body { grid-template-columns: minmax(0, 1fr); } .video-fig { max-width: 380px; } }
+/* Video list with channel button beside it */
+.yt-row { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; margin-top: 4px; }
+.yt-row .video-list { margin: 0; flex: 1 1 auto; min-width: 0; }
+.yt-row .yt-btn { margin-top: 0; padding: 16px 26px; font-size: 1rem; gap: 12px; flex-shrink: 0; }
+.yt-row .yt-btn svg { width: 18px; height: 18px; }
+.hobby-video .hobby-text { max-width: none; }
+@media (min-width: 1200px) {
+  .yt-row { flex-wrap: nowrap; }
+  .yt-row .video-list { flex: 1 1 0; }
+}
