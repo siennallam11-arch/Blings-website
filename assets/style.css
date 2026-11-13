@@ -271,7 +271,6 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .g-btn:hover { background: #fff; transform: scale(1.06); }
 .g-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .g-count { position: absolute; right: 10px; bottom: 10px; padding: 4px 8px; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; color: #fff; background: rgba(0,0,0,0.6); }
-.hobby-media.gallery .g-count { color: #fff; font-size: 0.75rem; }
 @media (max-width: 760px) { .hobby-media:not(.video) { aspect-ratio: 4 / 5; } }
 
 /* Match the home About paragraph size/colour across body copy */
@@ -285,3 +284,17 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 @media (max-width: 560px) {
   .role .title, .role .when, .role-desc, .courses .cname, .feature-text p, .hobby-text p { font-size: 1.125rem; }
 }
+
+/* Gallery: each photo at its natural ratio, frame height follows the photo */
+.hobby-media.gallery, .hobby-media.gallery:not(.video) { aspect-ratio: auto; background: none; height: auto; overflow: visible; }
+.hobby-media.gallery .g-track { height: auto; align-items: flex-start; transition: height 0.3s ease; }
+.hobby-media.gallery .g-slide { height: auto; background: none; }
+.hobby-media.gallery .g-slide img { width: 100%; height: auto; }
+.g-count { display: none; }
+@media (prefers-reduced-motion: reduce) { .hobby-media.gallery .g-track { transition: none; } }
+/* YouTube video list */
+.video-list { list-style: none; padding: 0; margin: 4px 0 22px; border-top: 1px solid var(--line); }
+.video-list li { border-bottom: 1px solid var(--line); font-size: 1.25rem; line-height: 1.65; padding-block: 10px; }
+.video-list a { color: var(--text); text-decoration: none; }
+.video-list a:hover { color: var(--accent); }
+@media (max-width: 560px) { .video-list li { font-size: 1.125rem; } }
