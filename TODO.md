@@ -8,7 +8,7 @@
 
 ## Open items
 - [ ] Baseball write-up (Hobbies toggle)
-- [ ] Confirm YouTube video titles and which link is which (Marathon / Every Racket Sport / Ping Pong / Intramurals)
+- [ ] Double-check the ping pong video link (t9JI6R1HQDk) is the right video
 - [ ] Confirm Stat 134 course code with William
 - [ ] Course website links (only Econ 148 is linked so far)
 - [ ] Rewrite the home page About blurb in William's voice (optional)
