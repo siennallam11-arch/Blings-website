@@ -1,4 +1,4 @@
-/* Stacked home. Geist headings, Geist Mono body. */
+/* Stacked home. Geist for headings and text, Geist Mono for small labels. */
 :root {
   --bg: #fdfdfc;
   --text: #161616;
@@ -8,6 +8,7 @@
   --tile: #efefec;
   --display: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --bg: #131313; --text: #ececea; --muted: #94969a; --line: #2a2a2a; --accent: #8aa8ff; --tile: #1e1e1e; color-scheme: dark; }
@@ -17,8 +18,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--text);
-  font: 15px/1.75 var(--mono);
-  letter-spacing: 0.01em;
+  font: 16px/1.7 var(--sans);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh; display: flex; flex-direction: column;
 }
@@ -89,8 +89,8 @@ p { margin-bottom: 14px; }
 .role .when { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.875rem; color: var(--muted); margin: 0; white-space: nowrap; }
 .role .title { color: var(--muted); margin: 6px 0 18px; }
 .role ul { padding-left: 18px; }
-.role li { margin-bottom: 10px; }
-.role li strong { font-weight: 600; color: var(--text); }
+.role li { margin-bottom: 14px; }
+.role li strong { font-weight: 500; color: var(--text); }
 @media (max-width: 860px) {
   .role { padding-block: 32px; }
   .role-head { flex-direction: column-reverse; align-items: flex-start; }
@@ -158,3 +158,6 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .marks { display: flex; align-items: center; gap: clamp(20px, 3vw, 40px); }
 .marks img { display: block; height: clamp(34px, 4vw, 52px); width: auto; }
 .role { scroll-margin-top: 16px; }
+
+/* Monospace reserved for small labels, codes and tags */
+.brand, .links, .eyebrow, .crumbs, .jump, .xlabel, .role .when, .dl, .sh-label, .foot-line, .courses .code, .chips li, .ex-desc, .role .title { font-family: var(--mono); }
