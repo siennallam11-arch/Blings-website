@@ -285,16 +285,27 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
   .role .title, .role .when, .role-desc, .courses .cname, .feature-text p, .hobby-text p { font-size: 1.125rem; }
 }
 
-/* Gallery: each photo at its natural ratio, frame height follows the photo */
-.hobby-media.gallery, .hobby-media.gallery:not(.video) { aspect-ratio: auto; background: none; height: auto; overflow: visible; }
-.hobby-media.gallery .g-track { height: auto; align-items: flex-start; transition: height 0.3s ease; }
-.hobby-media.gallery .g-slide { height: auto; background: none; }
-.hobby-media.gallery .g-slide img { width: 100%; height: auto; }
+/* Gallery: fixed frame, each photo shown whole at its own ratio (no crop, no black bars) */
+.hobby-media.gallery { aspect-ratio: 4 / 5; background: none; }
+.hobby-media.gallery .g-track { height: 100%; align-items: stretch; }
+.hobby-media.gallery .g-slide { height: 100%; background: none; display: flex; align-items: center; justify-content: center; }
+.hobby-media.gallery .g-slide img { width: 100%; height: 100%; object-fit: contain; }
 .g-count { display: none; }
-@media (prefers-reduced-motion: reduce) { .hobby-media.gallery .g-track { transition: none; } }
 /* YouTube video list */
-.video-list { list-style: none; padding: 0; margin: 4px 0 22px; border-top: 1px solid var(--line); }
-.video-list li { border-bottom: 1px solid var(--line); font-size: 1.25rem; line-height: 1.65; padding-block: 10px; }
-.video-list a { color: var(--text); text-decoration: none; }
+.video-list { list-style: disc; padding-left: 1.2em; margin: 4px 0 24px; }
+.video-list li { font-size: 1.25rem; line-height: 1.65; padding-block: 2px; color: var(--muted); }
+.video-list li::marker { color: var(--muted); }
+.video-list a { color: var(--text); }
 .video-list a:hover { color: var(--accent); }
 @media (max-width: 560px) { .video-list li { font-size: 1.125rem; } }
+
+/* Clear break between Extracurriculars and Hobbies */
+#hobby-list { margin-top: 56px; padding-top: 56px; border-top: 1px solid var(--line); }
+@media (max-width: 760px) { #hobby-list { margin-top: 32px; padding-top: 40px; } }
+.xlabel-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; border-bottom: 1px solid var(--text); }
+.xlabel-row .xlabel { border-bottom: none; }
+.collapse-all { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 14px; line-height: 1.75; padding: 0; border: 0; background: none; cursor: pointer; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; }
+.collapse-all[hidden] { display: none; }
+.collapse-all svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.collapse-all:hover { color: var(--text); }
+.collapse-all:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

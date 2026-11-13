@@ -55,7 +55,7 @@
       </div>
     </section>
     <section class="xsec" id="hobby-list">
-      <h2 class="xlabel">Hobbies</h2>
+      <div class="xlabel-row"><h2 class="xlabel">Hobbies</h2><button type="button" class="collapse-all" hidden>Collapse all <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 10l4.5-4.5L12.5 10"/></svg></button></div>
       <div class="hobbies">
         <details class="hobby" id="hobby-pickleball">
           <summary><span class="ex-name">Pickleball</span><svg class="hobby-caret" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg></summary>
@@ -92,18 +92,21 @@
     </section>
     <script>
     document.querySelectorAll('[data-gallery]').forEach(function(g){
-      var t=g.querySelector('.g-track'),slides=t.children,n=slides.length,prev=g.querySelector('.g-prev'),next=g.querySelector('.g-next');
+      var t=g.querySelector('.g-track'),n=t.children.length,prev=g.querySelector('.g-prev'),next=g.querySelector('.g-next');
       function idx(){return Math.round(t.scrollLeft/Math.max(1,t.clientWidth));}
-      function fit(){var s=slides[idx()];if(s&&s.offsetHeight)t.style.height=s.offsetHeight+'px';}
       function go(i){t.scrollTo({left:((i+n)%n)*t.clientWidth,behavior:'smooth'});}
-      function upd(){prev.hidden=idx()===0;fit();}
       next.addEventListener('click',function(){go(idx()+1);});
       prev.addEventListener('click',function(){go(idx()-1);});
-      t.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
-      [].forEach.call(t.querySelectorAll('img'),function(im){im.addEventListener('load',fit);});
-      var d=g.closest('details');if(d)d.addEventListener('toggle',function(){window.requestAnimationFrame(fit);});
-      window.addEventListener('resize',fit);fit();
+      t.addEventListener('scroll',function(){window.requestAnimationFrame(function(){prev.hidden=idx()===0;});},{passive:true});
     });
+    (function(){
+      var btn=document.querySelector('.collapse-all');if(!btn)return;
+      var ds=[].slice.call(document.querySelectorAll('.hobby'));
+      function upd(){btn.hidden=!ds.some(function(d){return d.open;});}
+      ds.forEach(function(d){d.addEventListener('toggle',upd);});
+      btn.addEventListener('click',function(){ds.forEach(function(d){d.open=false;});upd();});
+      upd();
+    })();
     </script>
   </main>
   <footer>
