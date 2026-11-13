@@ -202,3 +202,4 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .tiles .tile-photo { aspect-ratio: 16 / 9; }
 .band-body p:not(.lead) { font-size: 1.25rem; line-height: 1.65; }
 .hobby-list { margin-top: 0; border-top: none; }
+.tagline.tagline-wide { max-width: 86ch; }
