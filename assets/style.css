@@ -159,6 +159,8 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .title-row { display: flex; align-items: center; justify-content: space-between; gap: 16px 32px; flex-wrap: wrap; width: 100%; }
 .marks { display: flex; align-items: center; gap: clamp(16px, 3vw, 40px); }
 .marks a { display: block; color: var(--text); width: clamp(40px, 5vw, 64px); }
+.marks img { width: 100%; height: auto; display: block; transition: transform 0.2s ease; }
+.marks a:hover img { transform: translateY(-2px); }
 .marks svg { width: 100%; height: auto; display: block; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
 .marks a:hover { color: var(--accent); }
 .marks a:hover svg { transform: translateY(-2px); }
