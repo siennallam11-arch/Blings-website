@@ -117,7 +117,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .foot-top, .foot-line { max-width: 1320px; margin-left: auto; margin-right: auto; }
 
 /* Inner page header */
-.page-head { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding-bottom: 48px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+.page-head { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; padding-bottom: 24px; }
 .page-head h1 { margin: 0; }
 .crumbs { display: flex; gap: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--muted); }
 .crumbs a { color: var(--muted); text-decoration: none; }
@@ -131,3 +131,22 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .dl svg { transition: transform 0.2s ease; }
 @media (prefers-reduced-motion: reduce) { .dl svg { transition: none; } }
 .role h3 a { text-decoration-thickness: 1px; }
+
+/* Experience sections */
+.jump { display: flex; flex-wrap: wrap; gap: 6px 12px; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; color: var(--muted); }
+.jump a { color: var(--muted); text-decoration: none; }
+.jump a:hover { color: var(--text); text-decoration: underline; }
+.xsec { padding-top: 48px; scroll-margin-top: 16px; }
+.xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.78rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
+.xsec > .role { border-top: none; }
+.sublabel { font-size: 0.85rem; font-weight: 500; margin: 22px 0 12px; }
+.courses { list-style: none; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px 32px; }
+.courses li { margin: 0; padding-left: 14px; position: relative; }
+.courses li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
+.skills { margin: 0; }
+.skill-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 8px 32px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.skill-row dt { color: var(--muted); padding-top: 4px; }
+.skill-row dd { margin: 0; min-width: 0; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; }
+.chips li { border: 1px solid var(--line); padding: 3px 10px; font-size: 0.85rem; white-space: nowrap; }
+@media (max-width: 760px) { .skill-row { grid-template-columns: 1fr; } }
