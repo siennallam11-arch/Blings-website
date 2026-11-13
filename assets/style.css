@@ -229,7 +229,10 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .hobby-body p { margin: 0 0 14px; }
 @media (prefers-reduced-motion: reduce) { .hobby-caret { transition: none; } }
 
-.org-logo { width: clamp(64px, 6vw, 84px); height: auto; margin-top: 14px; display: block; }
+.feature-head.has-logo { flex-direction: row; justify-content: space-between; align-items: center; gap: 24px; }
+.feature-titles { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.feature-titles .tile-title { margin-bottom: 6px; }
+.org-logo { width: clamp(64px, 6vw, 88px); height: auto; display: block; flex-shrink: 0; }
 .hobby-body { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 24px 40px; align-items: start; max-width: none; }
 .hobby-media { aspect-ratio: 4 / 5; background: var(--tile); overflow: hidden; display: grid; place-items: center; max-width: 100%; }
 .hobby-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
