@@ -165,3 +165,30 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .xsec > .role + .role { border-top: 1px solid var(--line); }
 .role > p.muted { margin: 0; }
 .role-head + p.muted { margin-top: 10px; }
+
+/* Hobbies tiles */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding-top: 24px; }
+.tile { display: flex; flex-direction: column; gap: 18px; text-decoration: none; color: var(--text); min-width: 0; }
+.tile-photo, .story-photo { aspect-ratio: 4 / 3; max-width: 100%; background: var(--tile); display: grid; place-items: center; overflow: hidden; }
+.tile-photo span, .story-photo span { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); }
+.tile-photo img, .story-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.tile-body { display: flex; flex-direction: column; gap: 6px; }
+.tile-title { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; margin: 0; }
+.tile-meta { font-family: var(--mono); color: var(--muted); font-size: 0.9rem; margin: 0; }
+.tile-more { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; margin-top: 10px; }
+.tile-more span { display: inline-block; transition: transform 0.2s ease; }
+a.tile:hover .tile-title { color: var(--accent); }
+a.tile:hover .tile-more span { transform: translateX(4px); }
+a.tile:hover .tile-photo img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) { .tile-more span, .tile-photo img { transition: none; } }
+@media (max-width: 960px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .tiles { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
+
+/* Single hobby page */
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 48px; align-items: start; padding-top: 16px; }
+.story-photo { aspect-ratio: 4 / 3; }
+.story-text { min-width: 0; max-width: 68ch; }
+.back { margin-top: 56px; font-family: var(--mono); font-size: 0.9rem; }
+.back a { text-decoration: none; color: var(--muted); }
+.back a:hover { color: var(--text); }
+@media (max-width: 760px) { .story { grid-template-columns: 1fr; gap: 28px; } }
