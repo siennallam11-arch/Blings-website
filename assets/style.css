@@ -141,7 +141,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .xsec { padding-top: 48px; scroll-margin-top: 16px; }
 .xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
 .xsec > .role { border-top: none; }
-.sublabel { font-size: 0.85rem; font-weight: 500; margin: 22px 0 12px; }
+.sublabel { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 28px 0 12px; }
 .courses { list-style: none; padding: 0 !important; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: 48px; border-top: 1px solid var(--line); }
 .courses li { margin: 0 !important; display: grid; grid-template-columns: 9ch minmax(0, 1fr); gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); min-width: 0; }
 .courses .code { color: var(--muted); white-space: nowrap; }
@@ -203,7 +203,7 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .band-body p:not(.lead) { font-size: 1.25rem; line-height: 1.65; }
 .hobby-list { margin-top: 0; border-top: none; }
 .tagline.tagline-wide { max-width: 86ch; }
-.role-desc { color: var(--muted); font-family: var(--mono); font-size: clamp(0.98rem, 1.2vw, 1.05rem); line-height: 1.8; margin: 4px 0 0; max-width: none; }
+.role-desc { color: var(--muted); font-size: 1.05rem; line-height: 1.75; margin: 4px 0 0; max-width: none; }
 .role-desc strong { font-weight: 600; color: var(--text); }
 
 /* Job title, location and dates in the body font (same as course names) */
