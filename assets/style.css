@@ -123,7 +123,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .crumbs a { color: var(--muted); text-decoration: none; }
 .crumbs a:hover { color: var(--text); text-decoration: underline; }
 .crumbs [aria-current] { color: var(--text); }
-.tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.2rem, 2.2vw, 1.6rem); line-height: 1.4; max-width: 44ch; margin: 0; }
+.tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.45; max-width: 52ch; margin: 0; }
 .dl { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--text); }
 .dl svg { width: 15px; height: 15px; }
 .dl:hover { color: var(--accent); border-color: var(--accent); }
