@@ -130,3 +130,4 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .dl:hover svg { transform: translateY(2px); }
 .dl svg { transition: transform 0.2s ease; }
 @media (prefers-reduced-motion: reduce) { .dl svg { transition: none; } }
+.role h3 a { text-decoration-thickness: 1px; }

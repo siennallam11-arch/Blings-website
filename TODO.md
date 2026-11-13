@@ -5,4 +5,4 @@
 - [ ] Experience page: decide layout and detail level
 - [ ] Projects page: add projects (currently "coming soon")
 - [ ] Hobbies page: add content
-- [ ] HERO2 link, if there's a website
+- [x] HERO2 link (hero2.org)
