@@ -14,7 +14,7 @@ def page(fn,title,body,home=False):
   <meta name="description" content="William Chang — Data Science at UC Berkeley.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -177,7 +177,7 @@ def htoggle(key,name,desc,body,img=None,pos='center',video=None,slides=None):
     if slides:
         mediablock=gallery(slides)
     elif video:
-        mediablock=f'''<a class="hobby-media video" href="{video}" aria-label="Watch the video on YouTube">{media}<span class="watch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Watch on YouTube <span aria-hidden="true">↗</span></span></a>'''
+        mediablock=f'''<figure class="video-fig"><a class="hobby-media video" href="{video}" aria-label="Watch: I played 5 racket sports in one day (YouTube)">{media}</a><figcaption class="doodle"><svg class="doodle-arrow" viewBox="0 0 60 70" aria-hidden="true"><path d="M14 64 C 2 52, 4 28, 26 10"/><path d="M14 12 L 27 9 L 26 22"/></svg><span>I played 5 racket sports in one day!</span></figcaption></figure>'''
     else:
         mediablock=f'<div class="hobby-media">{media}</div>'
     body=f'''            {mediablock}

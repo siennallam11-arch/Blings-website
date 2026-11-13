@@ -309,3 +309,14 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .collapse-all svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .collapse-all:hover { color: var(--text); }
 .collapse-all:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* YouTube: smaller thumbnail with handwritten caption + doodle arrow */
+.hobby-video .hobby-body { grid-template-columns: minmax(0, 380px) minmax(0, 1fr); }
+.video-fig { margin: 0; display: flex; flex-direction: column; gap: 4px; max-width: 100%; }
+.video-fig .hobby-media.video { width: 100%; }
+.video-fig .watch { display: none; }
+.doodle { display: flex; align-items: flex-start; gap: 6px; padding-left: 4px; font-family: "Gaegu", "Comic Sans MS", cursive; font-weight: 700; font-size: 1.7rem; line-height: 1.1; color: var(--text); }
+.doodle span { padding-top: 34px; }
+.doodle-arrow { width: 58px; height: 68px; flex-shrink: 0; margin-top: -2px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.video-list { padding-left: 2.6em; }
+@media (max-width: 760px) { .hobby-video .hobby-body { grid-template-columns: minmax(0, 1fr); } .video-fig { max-width: 380px; } }
