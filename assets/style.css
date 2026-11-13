@@ -141,14 +141,10 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .xlabel { text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; font-weight: 400; color: var(--muted); margin: 0; padding-bottom: 14px; border-bottom: 1px solid var(--text); }
 .xsec > .role { border-top: none; }
 .sublabel { font-size: 0.85rem; font-weight: 500; margin: 22px 0 12px; }
-.courses { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
-.course-row { display: flex; flex-direction: column; gap: 12px; padding-block: 18px 22px; border-top: 1px solid var(--line); min-width: 0; }
-.course-row dt { color: var(--muted); }
-.course-row dd { margin: 0; min-width: 0; }
-.course-row ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-.course-row li { margin: 0; display: grid; grid-template-columns: 9ch minmax(0, 1fr); gap: 12px; }
-.course-row .code { color: var(--muted); white-space: nowrap; }
-@media (max-width: 860px) { .courses { grid-template-columns: minmax(0, 1fr); } }
+.courses { list-style: none; padding: 0 !important; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; column-gap: 48px; border-top: 1px solid var(--line); }
+.courses li { margin: 0 !important; display: grid; grid-template-columns: 9ch minmax(0, 1fr); gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); min-width: 0; }
+.courses .code { color: var(--muted); white-space: nowrap; }
+@media (max-width: 860px) { .courses { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-auto-flow: row; } }
 .skills { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
 .skill-row { display: flex; flex-direction: column; gap: 16px; padding-block: 28px 32px; border-bottom: 1px solid var(--line); min-width: 0; }
 .skill-row dt { font-family: var(--display); font-weight: 400; font-size: clamp(1.3rem, 2vw, 1.6rem); line-height: 1.2; color: var(--text); }
