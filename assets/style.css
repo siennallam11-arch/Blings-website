@@ -8,8 +8,9 @@
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --bg: #141414; --text: #ececec; --muted: #9a9a9a; --line: #2a2a2a; --accent: #8aa8ff; }
+  :root:not([data-theme="light"]) { --bg: #141414; --text: #ececec; --muted: #9a9a9a; --line: #2a2a2a; --accent: #8aa8ff; color-scheme: dark; }
 }
+:root[data-theme="dark"] { --bg: #141414; --text: #ececec; --muted: #9a9a9a; --line: #2a2a2a; --accent: #8aa8ff; color-scheme: dark; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--text);
