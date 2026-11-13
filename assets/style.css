@@ -256,3 +256,20 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
 .yt-btn:hover { background: #e62117; color: #fff; }
 @media (prefers-reduced-motion: reduce) { .hobby-media.video img, .hobby-media.video .watch { transition: none; } }
 @media (max-width: 760px) { .hobby-video .hobby-body { grid-template-columns: minmax(0, 1fr); } }
+
+/* Photo gallery inside a hobby */
+.hobby-media.gallery { position: relative; display: block; background: #111; }
+.g-track { display: flex; height: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.g-track::-webkit-scrollbar { display: none; }
+.g-slide { flex: 0 0 100%; height: 100%; margin: 0; scroll-snap-align: start; background: #111; }
+.g-slide img { width: 100%; height: 100%; display: block; }
+.g-btn { position: absolute; top: 50%; width: 36px; height: 36px; margin-top: -18px; border: 0; border-radius: 50%; background: rgba(255,255,255,0.88); color: #111; display: grid; place-items: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); transition: background 0.2s ease, transform 0.2s ease; }
+.g-btn[hidden] { display: none; }
+.g-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.g-prev svg { transform: rotate(180deg); }
+.g-next { right: 10px; } .g-prev { left: 10px; }
+.g-btn:hover { background: #fff; transform: scale(1.06); }
+.g-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.g-count { position: absolute; right: 10px; bottom: 10px; padding: 4px 8px; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; color: #fff; background: rgba(0,0,0,0.6); }
+.hobby-media.gallery .g-count { color: #fff; font-size: 0.75rem; }
+@media (max-width: 760px) { .hobby-media:not(.video) { aspect-ratio: 4 / 5; } }

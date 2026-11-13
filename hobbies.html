@@ -60,7 +60,7 @@
         <details class="hobby" id="hobby-pickleball">
           <summary><span class="ex-name">Pickleball</span><svg class="hobby-caret" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg></summary>
           <div class="hobby-body">
-            <div class="hobby-media"><img src="assets/pickleball.jpg" alt="Pickleball" style="object-position:50% 30%"></div>
+            <div class="hobby-media gallery" data-gallery><div class="g-track"><figure class="g-slide"><img src="assets/pickleball.jpg" alt="Playing a collegiate pickleball match for Cal" style="object-position:50% 30%;object-fit:cover" loading="lazy"></figure><figure class="g-slide"><img src="assets/pb-2.jpg" alt="Holding Cal IM Sports champion shirts after an intramural pickleball title" style="object-position:50% 55%;object-fit:cover" loading="lazy"></figure><figure class="g-slide"><img src="assets/pb-3.jpg" alt="Cal teammates at a College Pickleball Tour event" style="object-position:50% 45%;object-fit:cover" loading="lazy"></figure><figure class="g-slide"><img src="assets/pb-4.jpg" alt="Gold medals at a Paragon Pickleball tournament" style="object-position:50% 40%;object-fit:cover" loading="lazy"></figure><figure class="g-slide"><img src="assets/pb-5.jpg" alt="Cal team holding the collegiate tour bid winner banner for nationals" style="object-position:50% 50%;object-fit:contain" loading="lazy"></figure></div><button type="button" class="g-btn g-prev" aria-label="Previous photo" hidden><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5l4.5 4.5L6 12.5"/></svg></button><button type="button" class="g-btn g-next" aria-label="Next photo"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5l4.5 4.5L6 12.5"/></svg></button><span class="g-count" aria-live="polite">1 / 5</span></div>
             <div class="hobby-text">
             <p>I&rsquo;ve played tennis my whole life, but over the past year and a half I&rsquo;ve gotten serious about pickleball.</p>
             <p>Today, I serve on the executive team of Pickleball at Berkeley, UC Berkeley&rsquo;s collegiate team. We compete on the intercollegiate tour and made it to Nationals in 2026, and I&rsquo;ve also won two intramural championships at Berkeley.</p>
@@ -88,6 +88,17 @@
         </details>
       </div>
     </section>
+    <script>
+    document.querySelectorAll('[data-gallery]').forEach(function(g){
+      var t=g.querySelector('.g-track'),n=t.children.length,prev=g.querySelector('.g-prev'),next=g.querySelector('.g-next'),c=g.querySelector('.g-count');
+      function idx(){return Math.round(t.scrollLeft/Math.max(1,t.clientWidth));}
+      function go(i){t.scrollTo({left:((i+n)%n)*t.clientWidth,behavior:'smooth'});}
+      function upd(){var i=idx();prev.hidden=i===0;c.textContent=(i+1)+' / '+n;}
+      next.addEventListener('click',function(){go(idx()+1);});
+      prev.addEventListener('click',function(){go(idx()-1);});
+      t.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
+    });
+    </script>
   </main>
   <footer>
     <div class="foot-top">
