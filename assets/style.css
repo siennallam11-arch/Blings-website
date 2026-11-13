@@ -18,7 +18,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--text);
-  font: 16px/1.7 var(--sans);
+  font: 17px/1.7 var(--sans);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh; display: flex; flex-direction: column;
 }
@@ -90,7 +90,7 @@ p { margin-bottom: 14px; }
 .role .title { color: var(--muted); margin: 6px 0 18px; }
 .role ul { padding-left: 18px; }
 .role li { margin-bottom: 14px; }
-.role li strong { font-weight: 500; color: var(--text); }
+.role li strong { font-weight: 600; color: var(--text); }
 @media (max-width: 860px) {
   .role { padding-block: 32px; }
   .role-head { flex-direction: column-reverse; align-items: flex-start; }
@@ -124,7 +124,7 @@ header nav { max-width: 1400px; margin: 0 auto; }
 .crumbs a { color: var(--muted); text-decoration: none; }
 .crumbs a:hover { color: var(--text); text-decoration: underline; }
 .crumbs [aria-current] { color: var(--text); }
-.tagline { font-family: var(--display); font-weight: 300; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.45; max-width: 52ch; margin: 0; }
+.tagline { font-family: var(--mono); font-weight: 400; font-size: clamp(0.95rem, 1.3vw, 1.05rem); line-height: 1.65; max-width: 64ch; margin: 0; }
 .dl { display: inline-flex; align-items: center; gap: 8px; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.875rem; text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid var(--text); }
 .dl svg { width: 15px; height: 15px; }
 .dl:hover { color: var(--accent); border-color: var(--accent); }
