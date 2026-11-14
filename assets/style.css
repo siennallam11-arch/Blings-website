@@ -330,3 +330,9 @@ a.tile:hover .tile-photo img { transform: scale(1.03); }
   .yt-row { flex-wrap: nowrap; }
   .yt-row .video-list { flex: 1 1 0; }
 }
+/* Both extracurricular logos share one centre line: same title-column width in each row */
+.feature-head.has-logo { grid-template-columns: var(--ec-title-w, auto) minmax(0, 1fr); }
+.org-logo-wide { width: clamp(96px, 9vw, 130px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .org-logo-wide { filter: invert(1) hue-rotate(180deg) brightness(1.4); } }
+:root[data-theme="dark"] .org-logo-wide { filter: invert(1) hue-rotate(180deg) brightness(1.4); }
+@media (max-width: 760px) { .org-logo-wide { width: 88px; } }

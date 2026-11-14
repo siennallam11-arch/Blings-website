@@ -159,6 +159,19 @@ GALLERY_JS='''    <script>
       t.addEventListener('scroll',function(){window.requestAnimationFrame(function(){prev.hidden=idx()===0;});},{passive:true});
     });
     (function(){
+      var heads=[].slice.call(document.querySelectorAll('.feature-head.has-logo'));if(heads.length<2)return;
+      function w(el){var r=document.createRange();r.selectNodeContents(el);return r.getBoundingClientRect().width;}
+      function sync(){
+        heads.forEach(function(h){h.style.removeProperty('--ec-title-w');});
+        if(window.innerWidth<=760)return;
+        var m=0;heads.forEach(function(h){[].forEach.call(h.querySelector('.feature-titles').children,function(c){m=Math.max(m,w(c));});});
+        if(m<1)return;
+        heads.forEach(function(h){h.style.setProperty('--ec-title-w',Math.ceil(m)+'px');});
+      }
+      sync();if(document.fonts&&document.fonts.ready)document.fonts.ready.then(sync);window.addEventListener('resize',sync);window.addEventListener('load',sync);requestAnimationFrame(sync);
+      window.addEventListener('hashchange',function(){setTimeout(sync,0);});
+    })();
+    (function(){
       var btn=document.querySelector('.collapse-all');if(!btn)return;
       var ds=[].slice.call(document.querySelectorAll('.hobby'));
       function upd(){btn.hidden=!ds.some(function(d){return d.open;});}
@@ -223,9 +236,12 @@ page('hobbies.html','Hobbies & Extracurriculars — William Chang',f'''    <div 
         </div>
       </div>
       <div class="feature">
-        <div class="feature-head">
-          <h3 class="tile-title">Pickleball Coach</h3>
-          <p class="tile-meta">Beginner to intermediate level</p>
+        <div class="feature-head has-logo">
+          <div class="feature-titles">
+            <h3 class="tile-title">Pickleball Coach</h3>
+            <p class="tile-meta">Beginner to intermediate level</p>
+          </div>
+          <img class="org-logo org-logo-wide" src="assets/logo-neighborhood.png" alt="Neighborhood Pickleball logo" width="741" height="258">
         </div>
         <div class="feature-text">
           <p>This year, I started coaching private lessons at <a class="ext" href="https://neighborhoodpickleball.com/">Neighborhood Pickleball</a>, where I help players drill their fundamentals, improve their game, and get ready to compete.</p>
